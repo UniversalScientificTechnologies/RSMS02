@@ -1,0 +1,12 @@
+[submodule "hw/ADCoctoSPI01"]
+	path = hw/ADCoctoSPI01
+	url = git@github.com:mlab-modules/ADCoctoSPI01.git
+[submodule "hw/QFHMIX01"]
+	path = hw/QFHMIX01
+	url = git@github.com:mlab-modules/QFHMIX01.git
+[submodule "hw/RFIQINT02"]
+	path = hw/RFIQINT02
+	url = git@github.com:mlab-modules/RFIQINT02.git
+[submodule "hw/MPPB01"]
+	path = hw/MPPB01
+	url = git@github.com:mlab-modules/MPPB01.git

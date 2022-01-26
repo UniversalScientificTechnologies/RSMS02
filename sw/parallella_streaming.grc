@@ -1,0 +1,620 @@
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: parallella_streaming
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '2500000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 92.0]
+    rotation: 0
+    state: true
+- name: blocks_file_source_0
+  id: blocks_file_source
+  parameters:
+    affinity: ''
+    alias: ''
+    begin_tag: pmt.PMT_NIL
+    comment: ''
+    file: /dev/stdin
+    length: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    repeat: 'False'
+    type: short
+    vlen: '8'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 308.0]
+    rotation: 0
+    state: true
+- name: blocks_float_to_complex_0
+  id: blocks_float_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [824, 136.0]
+    rotation: 0
+    state: enabled
+- name: blocks_float_to_complex_0_0
+  id: blocks_float_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [824, 248.0]
+    rotation: 0
+    state: enabled
+- name: blocks_float_to_complex_0_1
+  id: blocks_float_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [824, 352.0]
+    rotation: 0
+    state: enabled
+- name: blocks_float_to_complex_0_2
+  id: blocks_float_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [824, 456.0]
+    rotation: 0
+    state: enabled
+- name: blocks_short_to_float_0
+  id: blocks_short_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 124.0]
+    rotation: 0
+    state: enabled
+- name: blocks_short_to_float_0_0
+  id: blocks_short_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 236.0]
+    rotation: 0
+    state: enabled
+- name: blocks_short_to_float_0_1
+  id: blocks_short_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 340.0]
+    rotation: 0
+    state: enabled
+- name: blocks_short_to_float_0_2
+  id: blocks_short_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 444.0]
+    rotation: 0
+    state: enabled
+- name: blocks_short_to_float_1
+  id: blocks_short_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 172.0]
+    rotation: 0
+    state: enabled
+- name: blocks_short_to_float_1_0
+  id: blocks_short_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 284.0]
+    rotation: 0
+    state: enabled
+- name: blocks_short_to_float_1_1
+  id: blocks_short_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 388.0]
+    rotation: 0
+    state: enabled
+- name: blocks_short_to_float_1_2
+  id: blocks_short_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 492.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_streams_0
+  id: blocks_vector_to_streams
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_streams: '8'
+    type: short
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [405, 197]
+    rotation: 0
+    state: enabled
+- name: fosphor_qt_sink_c_0
+  id: fosphor_qt_sink_c
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: channel 1
+    freq_center: '0'
+    freq_span: samp_rate
+    gui_hint: 'tab_widget_0@0 : 0,0,1,1'
+    wintype: firdes.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 148.0]
+    rotation: 0
+    state: disabled
+- name: fosphor_qt_sink_c_0_0
+  id: fosphor_qt_sink_c
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_center: '0'
+    freq_span: samp_rate
+    gui_hint: 'tab_widget_0@0: 0,1,1,1'
+    wintype: firdes.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1064, 260.0]
+    rotation: 0
+    state: disabled
+- name: fosphor_qt_sink_c_0_0_0
+  id: fosphor_qt_sink_c
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_center: '0'
+    freq_span: samp_rate
+    gui_hint: tab_widget_0@0:1,0,1,1
+    wintype: firdes.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1384, 356.0]
+    rotation: 0
+    state: disabled
+- name: fosphor_qt_sink_c_0_0_0_0
+  id: fosphor_qt_sink_c
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_center: '0'
+    freq_span: samp_rate
+    gui_hint: tab_widget_0@0:1,1,1,1
+    wintype: firdes.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 500.0]
+    rotation: 0
+    state: disabled
+- name: iqbalance_fix_cc_0
+  id: iqbalance_fix_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    mag: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    phase: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1168, 368.0]
+    rotation: 0
+    state: true
+- name: iqbalance_optimize_c_0
+  id: iqbalance_optimize_c
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    period: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1016, 396.0]
+    rotation: 0
+    state: true
+- name: qtgui_time_sink_x_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: green
+    color3: green
+    color4: black
+    color5: yellow
+    color6: dark blue
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'True'
+    entags: 'True'
+    grid: 'True'
+    gui_hint: tab_widget_0@1
+    label1: 1I
+    label10: Signal 10
+    label2: 1Q
+    label3: 2I
+    label4: 2Q
+    label5: 3I
+    label6: 3Q
+    label7: 4I
+    label8: 4Q
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '""'
+    nconnections: '8'
+    size: '1024'
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '7'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_NORM
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '10000'
+    ymin: '-10000'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [728, 680.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_waterfall_sink_x_0
+  id: qtgui_waterfall_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '0'
+    color10: '0'
+    color2: '0'
+    color3: '0'
+    color4: '0'
+    color5: '0'
+    color6: '0'
+    color7: '0'
+    color8: '0'
+    color9: '0'
+    comment: ''
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: ''
+    int_max: '10'
+    int_min: '-140'
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '4'
+    showports: 'False'
+    type: complex
+    update_time: '0.10'
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1272, 228.0]
+    rotation: 0
+    state: true
+- name: tab_widget_0
+  id: qtgui_tab_widget
+  parameters:
+    alias: ''
+    comment: ''
+    gui_hint: ''
+    label0: Frequency
+    label1: Time
+    label10: Tab 10
+    label11: Tab 11
+    label12: Tab 12
+    label13: Tab 13
+    label14: Tab 14
+    label15: Tab 15
+    label16: Tab 16
+    label17: Tab 17
+    label18: Tab 18
+    label19: Tab 19
+    label2: Tab 2
+    label3: Tab 3
+    label4: Tab 4
+    label5: Tab 5
+    label6: Tab 6
+    label7: Tab 7
+    label8: Tab 8
+    label9: Tab 9
+    num_tabs: '2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1344, 76.0]
+    rotation: 0
+    state: true
+
+connections:
+- [blocks_file_source_0, '0', blocks_vector_to_streams_0, '0']
+- [blocks_float_to_complex_0, '0', fosphor_qt_sink_c_0, '0']
+- [blocks_float_to_complex_0, '0', qtgui_waterfall_sink_x_0, '0']
+- [blocks_float_to_complex_0_0, '0', fosphor_qt_sink_c_0_0, '0']
+- [blocks_float_to_complex_0_0, '0', qtgui_waterfall_sink_x_0, '1']
+- [blocks_float_to_complex_0_1, '0', iqbalance_fix_cc_0, in]
+- [blocks_float_to_complex_0_1, '0', iqbalance_optimize_c_0, in]
+- [blocks_float_to_complex_0_2, '0', fosphor_qt_sink_c_0_0_0_0, '0']
+- [blocks_float_to_complex_0_2, '0', qtgui_waterfall_sink_x_0, '3']
+- [blocks_short_to_float_0, '0', blocks_float_to_complex_0, '0']
+- [blocks_short_to_float_0, '0', qtgui_time_sink_x_0, '0']
+- [blocks_short_to_float_0_0, '0', blocks_float_to_complex_0_0, '0']
+- [blocks_short_to_float_0_0, '0', qtgui_time_sink_x_0, '2']
+- [blocks_short_to_float_0_1, '0', blocks_float_to_complex_0_1, '0']
+- [blocks_short_to_float_0_1, '0', qtgui_time_sink_x_0, '4']
+- [blocks_short_to_float_0_2, '0', blocks_float_to_complex_0_2, '0']
+- [blocks_short_to_float_0_2, '0', qtgui_time_sink_x_0, '6']
+- [blocks_short_to_float_1, '0', blocks_float_to_complex_0, '1']
+- [blocks_short_to_float_1, '0', qtgui_time_sink_x_0, '1']
+- [blocks_short_to_float_1_0, '0', blocks_float_to_complex_0_0, '1']
+- [blocks_short_to_float_1_0, '0', qtgui_time_sink_x_0, '3']
+- [blocks_short_to_float_1_1, '0', blocks_float_to_complex_0_1, '1']
+- [blocks_short_to_float_1_1, '0', qtgui_time_sink_x_0, '5']
+- [blocks_short_to_float_1_2, '0', blocks_float_to_complex_0_2, '1']
+- [blocks_short_to_float_1_2, '0', qtgui_time_sink_x_0, '7']
+- [blocks_vector_to_streams_0, '0', blocks_short_to_float_0, '0']
+- [blocks_vector_to_streams_0, '1', blocks_short_to_float_1, '0']
+- [blocks_vector_to_streams_0, '2', blocks_short_to_float_0_0, '0']
+- [blocks_vector_to_streams_0, '3', blocks_short_to_float_1_0, '0']
+- [blocks_vector_to_streams_0, '4', blocks_short_to_float_0_1, '0']
+- [blocks_vector_to_streams_0, '5', blocks_short_to_float_1_1, '0']
+- [blocks_vector_to_streams_0, '6', blocks_short_to_float_0_2, '0']
+- [blocks_vector_to_streams_0, '7', blocks_short_to_float_1_2, '0']
+- [iqbalance_fix_cc_0, out, fosphor_qt_sink_c_0_0_0, '0']
+- [iqbalance_fix_cc_0, out, qtgui_waterfall_sink_x_0, '2']
+- [iqbalance_optimize_c_0, iqbal_corr</name>, iqbalance_fix_cc_0, iqbal_corr]
+
+metadata:
+  file_format: 1
