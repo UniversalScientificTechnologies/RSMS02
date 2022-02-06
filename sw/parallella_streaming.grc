@@ -1,7 +1,6 @@
 options:
   parameters:
     author: ''
-    catch_exceptions: 'True'
     category: '[GRC Hier Blocks]'
     cmake_opt: ''
     comment: ''
@@ -23,6 +22,7 @@ options:
     sizing_mode: fixed
     thread_safe_setters: ''
     title: ''
+    window_size: ''
   states:
     bus_sink: false
     bus_source: false
@@ -300,7 +300,7 @@ blocks:
     bus_structure: null
     coordinate: [1056, 148.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: fosphor_qt_sink_c_0_0
   id: fosphor_qt_sink_c
   parameters:
@@ -317,7 +317,7 @@ blocks:
     bus_structure: null
     coordinate: [1064, 260.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: fosphor_qt_sink_c_0_0_0
   id: fosphor_qt_sink_c
   parameters:
@@ -332,9 +332,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1384, 356.0]
+    coordinate: [1048, 332.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: fosphor_qt_sink_c_0_0_0_0
   id: fosphor_qt_sink_c
   parameters:
@@ -351,40 +351,7 @@ blocks:
     bus_structure: null
     coordinate: [1056, 500.0]
     rotation: 0
-    state: disabled
-- name: iqbalance_fix_cc_0
-  id: iqbalance_fix_cc
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    mag: '1'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    phase: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1168, 368.0]
-    rotation: 0
-    state: true
-- name: iqbalance_optimize_c_0
-  id: iqbalance_optimize_c
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    period: ''
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1016, 396.0]
-    rotation: 0
-    state: true
+    state: enabled
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
   parameters:
@@ -453,12 +420,12 @@ blocks:
     style7: '1'
     style8: '1'
     style9: '1'
-    tr_chan: '7'
+    tr_chan: '1'
     tr_delay: '0'
     tr_level: '0.0'
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
-    tr_tag: '""'
+    tr_tag: '"Ohradnik"'
     type: float
     update_time: '0.10'
     width1: '1'
@@ -535,14 +502,14 @@ blocks:
     showports: 'False'
     type: complex
     update_time: '0.10'
-    wintype: window.WIN_BLACKMAN_hARRIS
+    wintype: firdes.WIN_BLACKMAN_hARRIS
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
     coordinate: [1272, 228.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: tab_widget_0
   id: qtgui_tab_widget
   parameters:
@@ -584,8 +551,8 @@ connections:
 - [blocks_float_to_complex_0, '0', qtgui_waterfall_sink_x_0, '0']
 - [blocks_float_to_complex_0_0, '0', fosphor_qt_sink_c_0_0, '0']
 - [blocks_float_to_complex_0_0, '0', qtgui_waterfall_sink_x_0, '1']
-- [blocks_float_to_complex_0_1, '0', iqbalance_fix_cc_0, in]
-- [blocks_float_to_complex_0_1, '0', iqbalance_optimize_c_0, in]
+- [blocks_float_to_complex_0_1, '0', fosphor_qt_sink_c_0_0_0, '0']
+- [blocks_float_to_complex_0_1, '0', qtgui_waterfall_sink_x_0, '2']
 - [blocks_float_to_complex_0_2, '0', fosphor_qt_sink_c_0_0_0_0, '0']
 - [blocks_float_to_complex_0_2, '0', qtgui_waterfall_sink_x_0, '3']
 - [blocks_short_to_float_0, '0', blocks_float_to_complex_0, '0']
@@ -612,9 +579,6 @@ connections:
 - [blocks_vector_to_streams_0, '5', blocks_short_to_float_1_1, '0']
 - [blocks_vector_to_streams_0, '6', blocks_short_to_float_0_2, '0']
 - [blocks_vector_to_streams_0, '7', blocks_short_to_float_1_2, '0']
-- [iqbalance_fix_cc_0, out, fosphor_qt_sink_c_0_0_0, '0']
-- [iqbalance_fix_cc_0, out, qtgui_waterfall_sink_x_0, '2']
-- [iqbalance_optimize_c_0, iqbal_corr</name>, iqbalance_fix_cc_0, iqbal_corr]
 
 metadata:
   file_format: 1
