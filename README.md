@@ -1,6 +1,6 @@
 ### Radio Storm Monitorig Station
 
-Mobile UHF lightning mapping station based on antenna array.
+Mobile VLF lightning mapping station based on multi-directional loop antenna array.
 The array could be mounted stationary or mobile on the car roof.
 
 ![Stationary antenna array](./DOC/SRC/img/Stationary_array.jpg "Stationary antenna array on an observatory roof")
