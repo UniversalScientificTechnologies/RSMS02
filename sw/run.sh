@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nc parallella.lan 4000 | ./parallella_streaming.py
+nc parallella-vlf.lan 4000 | ./parallella_streaming.py

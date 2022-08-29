@@ -24,8 +24,6 @@ from PyQt5 import Qt
 from gnuradio import qtgui
 from gnuradio.filter import firdes
 import sip
-from gnuradio import fosphor
-from gnuradio.fft import window
 from gnuradio import blocks
 import pmt
 from gnuradio import gr
@@ -89,6 +87,120 @@ class parallella_streaming(gr.top_block, Qt.QWidget):
         self.tab_widget_0_layout_1.addLayout(self.tab_widget_0_grid_layout_1)
         self.tab_widget_0.addTab(self.tab_widget_0_widget_1, 'Time')
         self.top_grid_layout.addWidget(self.tab_widget_0)
+        self.qtgui_waterfall_sink_x_0_0_0 = qtgui.waterfall_sink_f(
+            1024, #size
+            firdes.WIN_BLACKMAN_hARRIS, #wintype
+            0, #fc
+            samp_rate, #bw
+            "", #name
+            1 #number of inputs
+        )
+        self.qtgui_waterfall_sink_x_0_0_0.set_update_time(0.10)
+        self.qtgui_waterfall_sink_x_0_0_0.enable_grid(False)
+        self.qtgui_waterfall_sink_x_0_0_0.enable_axis_labels(True)
+
+
+        self.qtgui_waterfall_sink_x_0_0_0.set_plot_pos_half(not True)
+
+        labels = ['REAR', 'TOP', 'REAR', '', '',
+                  '', '', '', '', '']
+        colors = [0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in range(1):
+            if len(labels[i]) == 0:
+                self.qtgui_waterfall_sink_x_0_0_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_waterfall_sink_x_0_0_0.set_line_label(i, labels[i])
+            self.qtgui_waterfall_sink_x_0_0_0.set_color_map(i, colors[i])
+            self.qtgui_waterfall_sink_x_0_0_0.set_line_alpha(i, alphas[i])
+
+        self.qtgui_waterfall_sink_x_0_0_0.set_intensity_range(-140, 10)
+
+        self._qtgui_waterfall_sink_x_0_0_0_win = sip.wrapinstance(self.qtgui_waterfall_sink_x_0_0_0.pyqwidget(), Qt.QWidget)
+        self.tab_widget_0_grid_layout_0.addWidget(self._qtgui_waterfall_sink_x_0_0_0_win, 1, 0, 1, 1)
+        for r in range(1, 2):
+            self.tab_widget_0_grid_layout_0.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.tab_widget_0_grid_layout_0.setColumnStretch(c, 1)
+        self.qtgui_waterfall_sink_x_0_0 = qtgui.waterfall_sink_f(
+            1024, #size
+            firdes.WIN_BLACKMAN_hARRIS, #wintype
+            0, #fc
+            samp_rate, #bw
+            "", #name
+            1 #number of inputs
+        )
+        self.qtgui_waterfall_sink_x_0_0.set_update_time(0.10)
+        self.qtgui_waterfall_sink_x_0_0.enable_grid(False)
+        self.qtgui_waterfall_sink_x_0_0.enable_axis_labels(True)
+
+
+        self.qtgui_waterfall_sink_x_0_0.set_plot_pos_half(not True)
+
+        labels = ['TOP', 'TOP', 'REAR', '', '',
+                  '', '', '', '', '']
+        colors = [0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in range(1):
+            if len(labels[i]) == 0:
+                self.qtgui_waterfall_sink_x_0_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_waterfall_sink_x_0_0.set_line_label(i, labels[i])
+            self.qtgui_waterfall_sink_x_0_0.set_color_map(i, colors[i])
+            self.qtgui_waterfall_sink_x_0_0.set_line_alpha(i, alphas[i])
+
+        self.qtgui_waterfall_sink_x_0_0.set_intensity_range(-140, 10)
+
+        self._qtgui_waterfall_sink_x_0_0_win = sip.wrapinstance(self.qtgui_waterfall_sink_x_0_0.pyqwidget(), Qt.QWidget)
+        self.tab_widget_0_grid_layout_0.addWidget(self._qtgui_waterfall_sink_x_0_0_win, 0, 1, 1, 1)
+        for r in range(0, 1):
+            self.tab_widget_0_grid_layout_0.setRowStretch(r, 1)
+        for c in range(1, 2):
+            self.tab_widget_0_grid_layout_0.setColumnStretch(c, 1)
+        self.qtgui_waterfall_sink_x_0 = qtgui.waterfall_sink_f(
+            1024, #size
+            firdes.WIN_BLACKMAN_hARRIS, #wintype
+            0, #fc
+            samp_rate, #bw
+            "", #name
+            1 #number of inputs
+        )
+        self.qtgui_waterfall_sink_x_0.set_update_time(0.10)
+        self.qtgui_waterfall_sink_x_0.enable_grid(False)
+        self.qtgui_waterfall_sink_x_0.enable_axis_labels(True)
+
+
+        self.qtgui_waterfall_sink_x_0.set_plot_pos_half(not True)
+
+        labels = ['RIGHT', 'TOP', 'REAR', '', '',
+                  '', '', '', '', '']
+        colors = [0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in range(1):
+            if len(labels[i]) == 0:
+                self.qtgui_waterfall_sink_x_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_waterfall_sink_x_0.set_line_label(i, labels[i])
+            self.qtgui_waterfall_sink_x_0.set_color_map(i, colors[i])
+            self.qtgui_waterfall_sink_x_0.set_line_alpha(i, alphas[i])
+
+        self.qtgui_waterfall_sink_x_0.set_intensity_range(-140, 10)
+
+        self._qtgui_waterfall_sink_x_0_win = sip.wrapinstance(self.qtgui_waterfall_sink_x_0.pyqwidget(), Qt.QWidget)
+        self.tab_widget_0_grid_layout_0.addWidget(self._qtgui_waterfall_sink_x_0_win, 0, 0, 1, 1)
+        for r in range(0, 1):
+            self.tab_widget_0_grid_layout_0.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.tab_widget_0_grid_layout_0.setColumnStretch(c, 1)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
             1024, #size
             samp_rate, #samp_rate
@@ -109,11 +221,11 @@ class parallella_streaming(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0.enable_stem_plot(False)
 
 
-        labels = ['1I', '1Q', '2I', '2Q', '3I',
-            '3Q', '4I', '4Q', 'Signal 9', 'Signal 10']
+        labels = ['RIGHT', 'TOP', 'NC', 'REAR', 'NC',
+            'NC', 'NC', 'NC', 'Signal 9', 'Signal 10']
         widths = [1, 1, 1, 1, 1,
             1, 1, 1, 1, 1]
-        colors = ['blue', 'green', 'green', 'black', 'yellow',
+        colors = ['blue', 'green', 'green', 'cyan', 'yellow',
             'dark blue', 'yellow', 'dark red', 'dark green', 'dark blue']
         alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
             1.0, 1.0, 1.0, 1.0, 1.0]
@@ -136,42 +248,6 @@ class parallella_streaming(gr.top_block, Qt.QWidget):
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
         self.tab_widget_0_layout_1.addWidget(self._qtgui_time_sink_x_0_win)
-        self.fosphor_qt_sink_c_0_0_0_0 = fosphor.qt_sink_c()
-        self.fosphor_qt_sink_c_0_0_0_0.set_fft_window(firdes.WIN_BLACKMAN_hARRIS)
-        self.fosphor_qt_sink_c_0_0_0_0.set_frequency_range(0, samp_rate)
-        self._fosphor_qt_sink_c_0_0_0_0_win = sip.wrapinstance(self.fosphor_qt_sink_c_0_0_0_0.pyqwidget(), Qt.QWidget)
-        self.tab_widget_0_grid_layout_0.addWidget(self._fosphor_qt_sink_c_0_0_0_0_win, 1, 1, 1, 1)
-        for r in range(1, 2):
-            self.tab_widget_0_grid_layout_0.setRowStretch(r, 1)
-        for c in range(1, 2):
-            self.tab_widget_0_grid_layout_0.setColumnStretch(c, 1)
-        self.fosphor_qt_sink_c_0_0_0 = fosphor.qt_sink_c()
-        self.fosphor_qt_sink_c_0_0_0.set_fft_window(firdes.WIN_BLACKMAN_hARRIS)
-        self.fosphor_qt_sink_c_0_0_0.set_frequency_range(0, samp_rate)
-        self._fosphor_qt_sink_c_0_0_0_win = sip.wrapinstance(self.fosphor_qt_sink_c_0_0_0.pyqwidget(), Qt.QWidget)
-        self.tab_widget_0_grid_layout_0.addWidget(self._fosphor_qt_sink_c_0_0_0_win, 1, 0, 1, 1)
-        for r in range(1, 2):
-            self.tab_widget_0_grid_layout_0.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.tab_widget_0_grid_layout_0.setColumnStretch(c, 1)
-        self.fosphor_qt_sink_c_0_0 = fosphor.qt_sink_c()
-        self.fosphor_qt_sink_c_0_0.set_fft_window(firdes.WIN_BLACKMAN_hARRIS)
-        self.fosphor_qt_sink_c_0_0.set_frequency_range(0, samp_rate)
-        self._fosphor_qt_sink_c_0_0_win = sip.wrapinstance(self.fosphor_qt_sink_c_0_0.pyqwidget(), Qt.QWidget)
-        self.tab_widget_0_grid_layout_0.addWidget(self._fosphor_qt_sink_c_0_0_win, 0, 1, 1, 1)
-        for r in range(0, 1):
-            self.tab_widget_0_grid_layout_0.setRowStretch(r, 1)
-        for c in range(1, 2):
-            self.tab_widget_0_grid_layout_0.setColumnStretch(c, 1)
-        self.fosphor_qt_sink_c_0 = fosphor.qt_sink_c()
-        self.fosphor_qt_sink_c_0.set_fft_window(firdes.WIN_BLACKMAN_hARRIS)
-        self.fosphor_qt_sink_c_0.set_frequency_range(0, samp_rate)
-        self._fosphor_qt_sink_c_0_win = sip.wrapinstance(self.fosphor_qt_sink_c_0.pyqwidget(), Qt.QWidget)
-        self.tab_widget_0_grid_layout_0.addWidget(self._fosphor_qt_sink_c_0_win, 0, 0, 1, 1)
-        for r in range(0, 1):
-            self.tab_widget_0_grid_layout_0.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.tab_widget_0_grid_layout_0.setColumnStretch(c, 1)
         self.blocks_vector_to_streams_0 = blocks.vector_to_streams(gr.sizeof_short*1, 8)
         self.blocks_short_to_float_1_2 = blocks.short_to_float(1, 1)
         self.blocks_short_to_float_1_1 = blocks.short_to_float(1, 1)
@@ -181,10 +257,6 @@ class parallella_streaming(gr.top_block, Qt.QWidget):
         self.blocks_short_to_float_0_1 = blocks.short_to_float(1, 1)
         self.blocks_short_to_float_0_0 = blocks.short_to_float(1, 1)
         self.blocks_short_to_float_0 = blocks.short_to_float(1, 1)
-        self.blocks_float_to_complex_0_2 = blocks.float_to_complex(1)
-        self.blocks_float_to_complex_0_1 = blocks.float_to_complex(1)
-        self.blocks_float_to_complex_0_0 = blocks.float_to_complex(1)
-        self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_short*8, '/dev/stdin', False, 0, 0)
         self.blocks_file_source_0.set_begin_tag(pmt.PMT_NIL)
 
@@ -194,25 +266,16 @@ class parallella_streaming(gr.top_block, Qt.QWidget):
         # Connections
         ##################################################
         self.connect((self.blocks_file_source_0, 0), (self.blocks_vector_to_streams_0, 0))
-        self.connect((self.blocks_float_to_complex_0, 0), (self.fosphor_qt_sink_c_0, 0))
-        self.connect((self.blocks_float_to_complex_0_0, 0), (self.fosphor_qt_sink_c_0_0, 0))
-        self.connect((self.blocks_float_to_complex_0_1, 0), (self.fosphor_qt_sink_c_0_0_0, 0))
-        self.connect((self.blocks_float_to_complex_0_2, 0), (self.fosphor_qt_sink_c_0_0_0_0, 0))
-        self.connect((self.blocks_short_to_float_0, 0), (self.blocks_float_to_complex_0, 0))
         self.connect((self.blocks_short_to_float_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.blocks_short_to_float_0_0, 0), (self.blocks_float_to_complex_0_0, 0))
+        self.connect((self.blocks_short_to_float_0, 0), (self.qtgui_waterfall_sink_x_0, 0))
         self.connect((self.blocks_short_to_float_0_0, 0), (self.qtgui_time_sink_x_0, 2))
-        self.connect((self.blocks_short_to_float_0_1, 0), (self.blocks_float_to_complex_0_1, 0))
         self.connect((self.blocks_short_to_float_0_1, 0), (self.qtgui_time_sink_x_0, 4))
-        self.connect((self.blocks_short_to_float_0_2, 0), (self.blocks_float_to_complex_0_2, 0))
         self.connect((self.blocks_short_to_float_0_2, 0), (self.qtgui_time_sink_x_0, 6))
-        self.connect((self.blocks_short_to_float_1, 0), (self.blocks_float_to_complex_0, 1))
         self.connect((self.blocks_short_to_float_1, 0), (self.qtgui_time_sink_x_0, 1))
-        self.connect((self.blocks_short_to_float_1_0, 0), (self.blocks_float_to_complex_0_0, 1))
+        self.connect((self.blocks_short_to_float_1, 0), (self.qtgui_waterfall_sink_x_0_0, 0))
         self.connect((self.blocks_short_to_float_1_0, 0), (self.qtgui_time_sink_x_0, 3))
-        self.connect((self.blocks_short_to_float_1_1, 0), (self.blocks_float_to_complex_0_1, 1))
+        self.connect((self.blocks_short_to_float_1_0, 0), (self.qtgui_waterfall_sink_x_0_0_0, 0))
         self.connect((self.blocks_short_to_float_1_1, 0), (self.qtgui_time_sink_x_0, 5))
-        self.connect((self.blocks_short_to_float_1_2, 0), (self.blocks_float_to_complex_0_2, 1))
         self.connect((self.blocks_short_to_float_1_2, 0), (self.qtgui_time_sink_x_0, 7))
         self.connect((self.blocks_vector_to_streams_0, 0), (self.blocks_short_to_float_0, 0))
         self.connect((self.blocks_vector_to_streams_0, 2), (self.blocks_short_to_float_0_0, 0))
@@ -233,11 +296,10 @@ class parallella_streaming(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.fosphor_qt_sink_c_0.set_frequency_range(0, self.samp_rate)
-        self.fosphor_qt_sink_c_0_0.set_frequency_range(0, self.samp_rate)
-        self.fosphor_qt_sink_c_0_0_0.set_frequency_range(0, self.samp_rate)
-        self.fosphor_qt_sink_c_0_0_0_0.set_frequency_range(0, self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
+        self.qtgui_waterfall_sink_x_0.set_frequency_range(0, self.samp_rate)
+        self.qtgui_waterfall_sink_x_0_0.set_frequency_range(0, self.samp_rate)
+        self.qtgui_waterfall_sink_x_0_0_0.set_frequency_range(0, self.samp_rate)
 
 
 
