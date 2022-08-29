@@ -10,9 +10,7 @@ The array could be mounted stationary or mobile on the car roof.
 
 #### Visualization
 
-The device uses [fosphor](https://osmocom.org/projects/sdr/wiki/fosphor) for real-time spectral vizualization.
 
-    sudo apt-get install nvidia-opencl-dev opencl-headers
+![Waterfall frequency display for antenna array](./DOC/SRC/img/frequency_display.png)
 
-
-![Fosphor waterfall for antenna array](./DOC/SRC/img/fosphor_waterfall.png)
+![Time display for antenna array](./DOC/SRC/img/time_display.png)
