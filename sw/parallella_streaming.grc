@@ -242,7 +242,7 @@ blocks:
     color2: green
     color3: green
     color4: cyan
-    color5: yellow
+    color5: dark red
     color6: dark blue
     color7: yellow
     color8: dark red
@@ -257,7 +257,7 @@ blocks:
     label2: TOP
     label3: NC
     label4: REAR
-    label5: NC
+    label5: Scintillator
     label6: NC
     label7: NC
     label8: NC
@@ -288,7 +288,7 @@ blocks:
     style7: '1'
     style8: '1'
     style9: '1'
-    tr_chan: '1'
+    tr_chan: '4'
     tr_delay: '0'
     tr_level: '0.0'
     tr_mode: qtgui.TRIG_MODE_NORM
@@ -369,7 +369,7 @@ blocks:
     nconnections: '1'
     showports: 'False'
     type: float
-    update_time: '0.10'
+    update_time: '0.01'
     wintype: firdes.WIN_BLACKMAN_hARRIS
   states:
     bus_sink: false
@@ -438,7 +438,7 @@ blocks:
     bus_structure: null
     coordinate: [1274, 356]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_waterfall_sink_x_0_0_0
   id: qtgui_waterfall_sink_x
   parameters:
@@ -497,9 +497,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1275, 479]
+    coordinate: [1274, 484]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: tab_widget_0
   id: qtgui_tab_widget
   parameters:
