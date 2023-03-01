@@ -5,6 +5,8 @@ The array could be mounted stationary or mobile on the car roof.
 
 ![Mobile VLF array mounted on the CRREAT measurement car](./DOC/SRC/img/mobile_array.jpg)
 
+The instrument is capable to process the lightning signal and generate trigger to another instruments (fast-camera as example). 
+
 ##### Fatures and parameters
 
   * Time precision of samples recording:  100 ns
@@ -37,3 +39,9 @@ The array could be mounted stationary or mobile on the car roof.
 ![Waterfall frequency display for antenna array](./DOC/SRC/img/frequency_display.png)
 
 ![Time display for antenna array](./DOC/SRC/img/time_display.png)
+
+
+#### Relevant scientific publications
+
+  * [In situ ground-based mobile measurement of lightning events above central Europe](https://amt.copernicus.org/articles/16/547/2023/)
+
