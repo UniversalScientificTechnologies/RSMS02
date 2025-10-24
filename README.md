@@ -47,9 +47,9 @@ The station’s multi‑channel digitizer is implemented with the [ADCoctoSPI01 
 | Full‑scale input                |        2 Vpp diff | Max linear differential swing of antenna output        |
 | Input referred noise            |        5.5 nV/√Hz | At VGA gain = 31 dB                                    |
 | VGA gain range                  |   −5 dB to +31 dB | Step size 0.125 dB (fine) and 1 dB (coarse)    |
-| SNR                             |         ≈ 65 dBFS | At 65 MSPS, −1 dBFS input (typ.)                       |
-| THD                             |        ≈ −65 dBFS | 5 MHz input, max gain (typ.)                           |
-| SINAD                    |   ≈ 63–65 dB | Depends on harmonic content; near SNR when THD ≪ noise |
+| Signal-to-Noise Ratio (SNR)     |         ≈ 65 dBFS | At 65 MSPS, −1 dBFS input (typ.)                       |
+| Total Harmonic Distortion (THD) |        ≈ −65 dBFS | 5 MHz input, max gain (typ.)                           |
+| Signal-to-Noise and Distortion Ratio (SINAD)  |   ≈ 63–65 dB | Depends on harmonic content; near SNR when THD ≪ noise |
 | Input impedance                 |    ≈ 5 kΩ | Differential; ~2 pF input capacitance                  |
 
 
@@ -59,7 +59,7 @@ Follow star‑ground topology at the receiver input; isolate loop shields from c
 
 ## Triggering and Recording
 
-* **Real‑time trigger:** Energy based (configurable in firmware/software)
+* **Real‑time trigger:** Signal-Energy-based (configurable in firmware/software)
 * **Pre‑/post‑trigger windows:** Configurable.
 * **External trigger out:** TTL pulse for synchronizing high‑speed cameras or other instruments.
 
