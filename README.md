@@ -4,7 +4,7 @@ VLF lightning mapping station based on a multi‑directional loop antenna array.
 
 ![Mobile VLF array mounted on the CRREAT measurement car](./DOC/SRC/img/mobile_array.jpg)
 
-![Stationary VLF array mounted on the building roof](./DOC/SRC/img/DOC/SRC/img/Stationary_array.jpg)
+![Stationary VLF array mounted on the building roof](./DOC/SRC/img/Stationary_array.jpg)
 
 The instrument processes lightning RF signatures and can generate hardware triggers for auxiliary instruments (e.g., high‑speed cameras).
 
