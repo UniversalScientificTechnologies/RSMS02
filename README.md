@@ -75,6 +75,8 @@ Follow star‑ground topology at the receiver input; isolate loop shields from c
 
 ![Time display for antenna array](./DOC/SRC/img/time_display.png)
 
+![Lightning map calculated from a multiple stations](./DOC/SRC/img/RSMS02_VLF_lightning_map.png)
+
 #### Relevant scientific publications
 
   * [In situ ground-based mobile measurement of lightning events above central Europe](https://amt.copernicus.org/articles/16/547/2023/)
